@@ -52,7 +52,7 @@ function register() {
     pwdError.innerHTML = "";
     c3 = true;
   }
-  if (cfmPwd.value !== pwd.value && pwd.value != "") {
+  if (cfmPwd.value !== pwd.value && !(pwd.value.length < 8)) {
     cfmError.innerHTML = "Passwords don't match";
   } else if (cfmPwd.value == pwd.value) {
     cfmError.innerHTML = "";
